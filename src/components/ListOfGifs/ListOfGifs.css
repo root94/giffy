@@ -1,0 +1,27 @@
+:root{
+    --columns-number:2;
+}
+
+
+.ListOfGifs{
+    padding: 2em;
+    column-count: var(--columns-number);
+    column-gap: 0.5em;
+   
+  
+}
+.imagen{
+    width: 100%;
+}
+
+@media (min-width: 600px){
+    :root{
+        --columns-number: 3
+    }
+}
+
+@media (min-width: 800px){
+    :root{
+        --columns-number: 4
+    }
+}
