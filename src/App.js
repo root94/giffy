@@ -5,6 +5,8 @@ import Home from "./pages/home";
 import ListOfGifs from './components/ListOfGifs/ListOfGifs'
 import Detail from './components/Details/Detail'
 import { Route } from "wouter"
+import ResultadoSearch from "./components/ResultadoSearch";
+import {GifsContextProvider} from "./context/GifsContext"
 
 function App() {
 
@@ -21,9 +23,11 @@ function App() {
     <div className="App">
       <section className="App-content">
       {/* <Home></Home> */}
+      <GifsContextProvider> 
       <Route path="/" component={Home} />
-      <Route path="/search/:keyword" component={ListOfGifs} /> 
+      <Route path="/search/:keyword" component={ResultadoSearch} /> 
       <Route path="/gif/:id" component={Detail} />  
+    </GifsContextProvider>
       </section>
     </div>
   );
